@@ -1,14 +1,21 @@
 
 import './App.css'
 
-export function XFollowingCard({username,name,isFollowing}) {
+export function XFollowingCard({username,name,isFollowing,formatUsername}) {
 
     //!Parametrizar el componente
-    //Si nos damos cuenta el parametro isFollowing no se ha utilizado.
-    //Si un parametro no se inicializa o no se pasa, tiene un valor undefined, no false.
+    /*
+    Vamos a crar una funcion para que concatene el username con @
+    */
+
+    
 
     //Javascript
     let url="https://unavatar.io/x/"+username;
+
+    //!Parametrizar el componente
+    /*
+    Las funciones en vez de crearlas dentro del componente, lo ideal es pasarsselas al componente como parametro.*/ 
     console.log(isFollowing);
     return (
         
@@ -18,7 +25,7 @@ export function XFollowingCard({username,name,isFollowing}) {
                 <img className='x-followCard-avatar' src={url} alt="Mi avatar" />
                 <div className='x-followCard-info'>
                     <strong>{name}</strong>
-                    <span className='x-followCard-infoUserName'>@{username}</span>
+                    <span className='x-followCard-infoUserName'>{formatUsername(username)}</span>
                 </div>
             </header>
             <aside>

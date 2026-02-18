@@ -4,20 +4,23 @@ import { XFollowingCard } from './XFollowingCard';
 
 //!Compontente Reutilizable
 /*
-El componente que hemos definido lo hemos nombrado como App, para hacerlo corrrectamente, deberiamos de asociarle un nombre afin a su objetivo, XFollowingCard.jsx e importarlo en nuestro App.jsx
+Defino mi funcion fuera del componente
 */
+function formateo(username){
+        return "@" + username;
+    }
 function App() {
   return (
 
 
     <>
       <section className='OneCard'>
-        <XFollowingCard name="Carlos Ortiz Santiago" isFollowing={true} username="elcarlitosortiz"></XFollowingCard>
+        <XFollowingCard name="Carlos Ortiz Santiago" isFollowing={true} formatUsername={formateo} username="elcarlitosortiz"></XFollowingCard>
       </section>
 
       <section className='MoreCards'>
-        <XFollowingCard name="Donal Trump" isFollowing={false} username="realDonaldTrump"></XFollowingCard>
-        <XFollowingCard name="Vladimir Putin" username="TheBigBossPutin"></XFollowingCard>
+        <XFollowingCard name="Donal Trump" isFollowing={false} formatUsername={formateo} username="realDonaldTrump"></XFollowingCard>
+        <XFollowingCard name="Vladimir Putin" formatUsername={formateo} username="TheBigBossPutin"></XFollowingCard>
       </section>
 
 
