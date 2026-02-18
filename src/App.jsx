@@ -3,24 +3,20 @@ import { XFollowingCard } from './XFollowingCard';
 
 
 //!Compontente Reutilizable
-/*
-Defino mi funcion fuera del componente
-*/
-function formateo(username){
-        return "@" + username;
-    }
+let userNameFormated = <span>@elcarlitosortiz</span>
+
 function App() {
   return (
 
 
     <>
       <section className='OneCard'>
-        <XFollowingCard name="Carlos Ortiz Santiago" isFollowing={true} formatUsername={formateo} username="elcarlitosortiz"></XFollowingCard>
+        <XFollowingCard name="Carlos Ortiz Santiago" isFollowing={true} formatUsername={userNameFormated} username="elcarlitosortiz"></XFollowingCard>
       </section>
 
       <section className='MoreCards'>
-        <XFollowingCard name="Donal Trump" isFollowing={false} formatUsername={formateo} username="realDonaldTrump"></XFollowingCard>
-        <XFollowingCard name="Vladimir Putin" formatUsername={formateo} username="TheBigBossPutin"></XFollowingCard>
+        <XFollowingCard name="Donal Trump" isFollowing={false} formatUsername={userNameFormated} username="realDonaldTrump"></XFollowingCard>
+        <XFollowingCard name="Vladimir Putin" formatUsername={userNameFormated} username="TheBigBossPutin"></XFollowingCard>
       </section>
 
 

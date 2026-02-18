@@ -15,7 +15,7 @@ export function XFollowingCard({username,name,isFollowing,formatUsername}) {
 
     //!Parametrizar el componente
     /*
-    Las funciones en vez de crearlas dentro del componente, lo ideal es pasarsselas al componente como parametro.*/ 
+    Ahora mi componente no esta recibiendo uan funcion sino un elemento.*/ 
     console.log(isFollowing);
     return (
         
@@ -25,7 +25,7 @@ export function XFollowingCard({username,name,isFollowing,formatUsername}) {
                 <img className='x-followCard-avatar' src={url} alt="Mi avatar" />
                 <div className='x-followCard-info'>
                     <strong>{name}</strong>
-                    <span className='x-followCard-infoUserName'>{formatUsername(username)}</span>
+                    <span className='x-followCard-infoUserName'>{formatUsername}</span>
                 </div>
             </header>
             <aside>
