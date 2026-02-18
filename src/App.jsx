@@ -1,7 +1,13 @@
 import './App.css'
+import { XFollowingCard } from './XFollowingCard';
 
-function App(){
-  return(
+
+//!Compontente Reutilizable
+/*
+El componente que hemos definido lo hemos nombrado como App, para hacerlo corrrectamente, deberiamos de asociarle un nombre afin a su objetivo, XFollowingCard.jsx e importarlo en nuestro App.jsx
+*/
+function App() {
+  return (
     /*
     Estilos en linea
     <article style="display:flex"></article> Esto es erroneo
@@ -16,21 +22,27 @@ function App(){
     -id: no es recomendable porque nuestro objetivo es que nuestro componente sea reutilizable. El id no se puede repetir.
     -class: No es valido, ya que cuando se traduce jsx lo hace a javascript y la palabra class esta reservada.
     -className: Es valido. Puede utilizar la nomenclatura
+
+
+    Me doy cuenta de que cuando hay varios componentes juntos necesitna un padding, pero si edito el XFollowingCard se aplica a todos.
+    Puede haber ocasiones en lo que esto no es lo adecuado, para solucionarlo, los componentes se meten en otros contenedores y se les da a esos contenedores el estilo deseado.
     */
-    
-    <article className='x-followCard'>
-      <header className='x-followCard-header'>
-        <img className='x-followCard-avatar' src="https://pbs.twimg.com/profile_images/2021500072677212166/5NGWhKny_400x400.jpg" alt="Mi avatar" />
-        <div className='x-followCard-info'>
-          <strong>Carlos Ortiz Santiago</strong>
-          <span className='x-followCard-infoUserName'>@elcarlitosortiz</span>
-        </div>
-      </header>
-      <aside>
-        <button className='x-followCard-button'>Seguir</button>
-      </aside>
-    </article>
+
+    <>
+      <section className='OneCard'>
+        <XFollowingCard name="Carlos Ortiz Santiago" username="elcarlitosortiz"></XFollowingCard>
+      </section>
+
+      <section className='MoreCards'>
+        <XFollowingCard name="Donal Trump" username="realDonaldTrump"></XFollowingCard>
+        <XFollowingCard name="Vladimir Putin" username="TheBigBossPutin"></XFollowingCard>
+      </section>
+
+
+    </>
+
   );
+
 }
 
 
