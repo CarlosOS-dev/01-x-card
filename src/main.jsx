@@ -21,3 +21,4 @@ root.render(
 );
 
 //!Damos estilo a nuestra web en el fichero /src/index.css
+//!Damos estilo a nuestros componentes en el fichero /src/App.css
