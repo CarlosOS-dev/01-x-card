@@ -1,21 +1,21 @@
 
 import './App.css'
 
-export function XFollowingCard({username,name,isFollowing,formatUsername}) {
+//Caracteristicas de las props
+//1. Son un objeto
+//2. Son inmutables
+//Ejemplo: username ="@"+username;
+//Si recibo un vector de tamaño 4 y le añado un elemento con push, estaria mal.
 
-    //!Parametrizar el componente
-    /*
-    Vamos a crar una funcion para que concatene el username con @
-    */
+/*Props de tipo children
+    <XFollowingCard>{children}</XFollowingCard> */
 
-    
+export function XFollowingCard({username,children,isFollowing,formatUsername}) {
+
 
     //Javascript
     let url="https://unavatar.io/x/"+username;
 
-    //!Parametrizar el componente
-    /*
-    Ahora mi componente no esta recibiendo uan funcion sino un elemento.*/ 
     console.log(isFollowing);
     return (
         
@@ -24,7 +24,7 @@ export function XFollowingCard({username,name,isFollowing,formatUsername}) {
             <header className='x-followCard-header'>
                 <img className='x-followCard-avatar' src={url} alt="Mi avatar" />
                 <div className='x-followCard-info'>
-                    <strong>{name}</strong>
+                    <strong>{children}</strong>
                     <span className='x-followCard-infoUserName'>{formatUsername}</span>
                 </div>
             </header>

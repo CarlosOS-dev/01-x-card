@@ -11,12 +11,12 @@ function App() {
 
     <>
       <section className='OneCard'>
-        <XFollowingCard name="Carlos Ortiz Santiago" isFollowing={true} formatUsername={userNameFormated} username="elcarlitosortiz"></XFollowingCard>
+        <XFollowingCard  isFollowing={true} formatUsername={userNameFormated} username="elcarlitosortiz">Carlos Ortiz Santiago</XFollowingCard>
       </section>
 
       <section className='MoreCards'>
-        <XFollowingCard name="Donal Trump" isFollowing={false} formatUsername={userNameFormated} username="realDonaldTrump"></XFollowingCard>
-        <XFollowingCard name="Vladimir Putin" formatUsername={userNameFormated} username="TheBigBossPutin"></XFollowingCard>
+        <XFollowingCard isFollowing={false} formatUsername={userNameFormated} username="realDonaldTrump">Donal Trump</XFollowingCard>
+        <XFollowingCard  formatUsername={userNameFormated} username="TheBigBossPutin">Vladimir Putin</XFollowingCard>
       </section>
 
 
