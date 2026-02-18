@@ -4,10 +4,12 @@ import './App.css'
 export function XFollowingCard({username,name,isFollowing}) {
 
     //!Parametrizar el componente
-    //Los parametros se pasan como un objeto
+    //Si nos damos cuenta el parametro isFollowing no se ha utilizado.
+    //Si un parametro no se inicializa o no se pasa, tiene un valor undefined, no false.
 
     //Javascript
     let url="https://unavatar.io/x/"+username;
+    console.log(isFollowing);
     return (
         
         <article className='x-followCard'>
