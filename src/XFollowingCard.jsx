@@ -1,5 +1,6 @@
 
 import './App.css'
+import { useState } from 'react'
 
 /*
  El estado es similar a cuando entramos en clase, puede estar la luz encendida o apagada en funcion de como este la luz la clase tiene una apariencia u otra. Este concepto de estado es el mismo que vamos a usar en React con lso componentes y nos ayudan a que tengan vida.
@@ -8,11 +9,17 @@ import './App.css'
  Vamos a hacer que si pongo el raton encima del boton cambie el color de fondo y el color del texto.
 */
 
-export function XFollowingCard({username,children,isFollowing,formatUsername}) {
+export function XFollowingCard({username,children,formatUsername}) {
 
 
     //Javascript
     let url="https://unavatar.io/x/"+username;
+    
+
+    let[isFollowing, setIsFollowing] = useState(false);
+    function hacerClick(){
+        setIsFollowing(!isFollowing);
+    }
 
     let textoBoton = isFollowing ? 'Siguiendo' : 'Seguir';
 
@@ -31,7 +38,7 @@ export function XFollowingCard({username,children,isFollowing,formatUsername}) {
                 </div>
             </header>
             <aside>
-                <button className={claseBoton}>{textoBoton}</button>
+                <button className={claseBoton} onClick={hacerClick}>{textoBoton}</button>
             </aside>
         </article>
     );
