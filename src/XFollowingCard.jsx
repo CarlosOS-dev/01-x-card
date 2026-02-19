@@ -1,20 +1,22 @@
 
 import './App.css'
 
-//Caracteristicas de las props
-//1. Son un objeto
-//2. Son inmutables
-//Ejemplo: username ="@"+username;
-//Si recibo un vector de tamaño 4 y le añado un elemento con push, estaria mal.
+/*
+ El estado es similar a cuando entramos en clase, puede estar la luz encendida o apagada en funcion de como este la luz la clase tiene una apariencia u otra. Este concepto de estado es el mismo que vamos a usar en React con lso componentes y nos ayudan a que tengan vida.
 
-/*Props de tipo children
-    <XFollowingCard>{children}</XFollowingCard> */
+
+ Vamos a hacer que si pongo el raton encima del boton cambie el color de fondo y el color del texto.
+*/
 
 export function XFollowingCard({username,children,isFollowing,formatUsername}) {
 
 
     //Javascript
     let url="https://unavatar.io/x/"+username;
+
+    let textoBoton = isFollowing ? 'Siguiendo' : 'Seguir';
+
+    let claseBoton = isFollowing ? 'x-followCard-button is-following' : 'x-followCard-button';
 
     console.log(isFollowing);
     return (
@@ -29,7 +31,7 @@ export function XFollowingCard({username,children,isFollowing,formatUsername}) {
                 </div>
             </header>
             <aside>
-                <button className='x-followCard-button'>Seguir</button>
+                <button className={claseBoton}>{textoBoton}</button>
             </aside>
         </article>
     );
