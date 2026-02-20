@@ -2,9 +2,7 @@
 import './App.css'
 import { useState } from 'react'
 
-/*
-
-*/
+//!Componente Finalizado
 
 export function XFollowingCard({username,children,initialIsFollowing}) {
 
